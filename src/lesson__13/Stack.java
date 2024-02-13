@@ -1,4 +1,4 @@
-package lesson_13;
+package lesson__13;
 
 import java.util.Arrays;
 
@@ -22,8 +22,9 @@ public class Stack {
         }
        return null;
     }
-   // public static String arrayToString(){
-       // return Arrays.toString(Arrays.copyOf(stack,idx);
+  //  public static String arrayToString(){
+    //   return Arrays.toString(Arrays.copyOf(stack,idx);
 
    // }
+
 }
