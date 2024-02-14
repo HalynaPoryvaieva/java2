@@ -1,9 +1,7 @@
 package lesson__13;
 
-import java.util.Stack;
-
 public class
-hm12 {
+Hm12 {
     public static void main(String[] args) {
         //int p=linerSearch(new int[]{1,8,12,-4,6,3,7,-3});
         //System.out.println(p);
