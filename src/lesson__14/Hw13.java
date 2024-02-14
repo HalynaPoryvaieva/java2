@@ -13,46 +13,42 @@ public class Hw13 {
     // Увеличить размерность массива до 100_000_000 и снова замерить время. Какие выводы?
 
 
-
-
-
     public static void main(String[] args) {
-        
 
 
         int[] array = createRandomArray(100000, 100000000);
-for (int lange:array){
-    long startTime=0;
+        for (int lange : array) {
+            long startTime = 0;
 
 
-        System.out.println("Размер массива: " + array.length);
+            System.out.println("Размер массива: " + array.length);
 
-        long starTime = System.currentTimeMillis();
-    array = createRandomArray(1000000, 100000000);
-        long andTime = System.currentTimeMillis();
+            long starTime = System.currentTimeMillis();
+            array = createRandomArray(1000000, 100000000);
+            long andTime = System.currentTimeMillis();
 
-    System.out.println("Время создания массива: " + (andTime - startTime) + "ms ");
-
-
-        starTime=System.currentTimeMillis();
-        linerSerhc(array, 50);
-        andTime=System.currentTimeMillis();
-        System.out.println(" linerSerhc Time:"+(andTime - startTime)+"ms");
-        System.out.println(linerSerhc(array,50));
+            System.out.println("Время создания массива: " + (andTime - startTime) + "ms ");
 
 
-        selectionSort(array);
-        starTime=System.currentTimeMillis();
-        andTime=System.currentTimeMillis();
-        System.out.println(" selectionSort Time:"+(andTime - startTime)+"ms");
-        System.out.println(Arrays.toString(array));
+            starTime = System.currentTimeMillis();
+            linerSerhc(array, 50);
+            andTime = System.currentTimeMillis();
+            System.out.println(" linerSerhc Time:" + (andTime - startTime) + "ms");
+            System.out.println(linerSerhc(array, 50));
 
-        binarySearch(array, 50);
-        starTime=System.currentTimeMillis();
-        andTime=System.currentTimeMillis();
-        System.out.println(binarySearch(array,50));
-        System.out.println(" binarySearch Time:"+(andTime - startTime)+"ms");
-}
+
+            selectionSort(array);
+            starTime = System.currentTimeMillis();
+            andTime = System.currentTimeMillis();
+            System.out.println(" selectionSort Time:" + (andTime - startTime) + "ms");
+            System.out.println(Arrays.toString(array));
+
+            binarySearch(array, 50);
+            starTime = System.currentTimeMillis();
+            andTime = System.currentTimeMillis();
+            System.out.println(binarySearch(array, 50));
+            System.out.println(" binarySearch Time:" + (andTime - startTime) + "ms");
+        }
 
     }
 }
