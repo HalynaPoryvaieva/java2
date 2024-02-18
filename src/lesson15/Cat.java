@@ -66,14 +66,14 @@ public class Cat {
         if (energy >= 5) {
             System.out.println("I run");
             energy -= 5;
-            System.out.println("Energy:" + energy);
+            System.out.println("Energy:");
 
         } else {
             System.out.println("Lack of energy!");
             System.out.println("I am going to eat");
             eat(5);
             System.out.println("I run");
-            System.out.println("residual energy:" + energy);
+            System.out.println("residual energy:");
         }
         return energy;
     }
