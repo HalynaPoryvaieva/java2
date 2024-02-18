@@ -23,7 +23,6 @@ public class Cat {
         this.energy = energy;
     }
 
-
     public Cat() {
     }
 
