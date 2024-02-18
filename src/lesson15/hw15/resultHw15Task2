@@ -1,0 +1,20 @@
+C:\Users\ponka\.jdks\corretto-11.0.22\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\lib\idea_rt.jar=61712:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\bin" -Dfile.encoding=UTF-8 -classpath C:\AIT\BasicJava\JavaBasicProject\java2\out\production\java2 lesson15.hw15.CarMain
+No gas!
+I need to refuel!
+I am going to refuel
+residual gasoline:5
+startEngine
+
+Car is driving
+residual gasoline:2
+No gas!
+I need to refuel!
+I am going to refuel
+residual gasoline:3
+startEngine
+
+Car is driving
+residual gasoline:0
+0
+
+Process finished with exit code 0
