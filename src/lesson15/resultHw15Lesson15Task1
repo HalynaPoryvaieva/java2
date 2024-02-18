@@ -1,0 +1,26 @@
+C:\Users\ponka\.jdks\corretto-11.0.22\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\lib\idea_rt.jar=61063:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\bin" -Dfile.encoding=UTF-8 -classpath C:\AIT\BasicJava\JavaBasicProject\java2\out\production\java2 lesson15.Lesson15
+Meow!
+Max,whiteage:3volume:10energy:4
+Meow!
+Ted,white,7volume:10energy:4
+50.0
+___________________________
+I go
+Energy:1
+Lack of energy!
+I am going to eat
+I go
+residual energy:1
+1
+___________________________
+Lack of energy!
+I am going to eat
+I run
+residual energy:3
+Lack of energy!
+I am going to eat
+I run
+residual energy:3
+3
+
+Process finished with exit code 0
