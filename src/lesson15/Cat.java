@@ -28,11 +28,7 @@ public class Cat {
     }
 
     public void eat(int food) {
-        this.food = food;
-    }
-
-    public void voluem(int volume) {
-        this.food = volume++;
+        this.food+= food;
     }
 
     public double satisfied() {
@@ -44,7 +40,7 @@ public class Cat {
     }
 
     public void energy() {
-        volume++;
+       energy ++;
     }
 
     public int walk() {
@@ -73,7 +69,7 @@ public class Cat {
             System.out.println("I am going to eat");
             eat(5);
             System.out.println("I run");
-            System.out.println("residual energy:");
+            System.out.println("residual energy:"+energy);
         }
         return energy;
     }

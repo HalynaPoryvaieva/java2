@@ -17,11 +17,12 @@ public class Lesson15 {
         System.out.println(cat1.name + "," + cat1.color + "," + cat1.age + "volume:" + cat.volume + "energy:" + cat.energy);
         cat1.eat(5);
         System.out.println(cat1.satisfied());
+
         System.out.println("___________________________");
         cat.walk();
-        System.out.println(cat.walk());
+
         System.out.println("___________________________");
         cat1.run();
-        System.out.println(cat1.run());
+
     }
 }
