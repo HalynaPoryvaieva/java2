@@ -1,10 +1,10 @@
-package lesson__13;
+package lesson13;
 
-import lesson__9.HomeWork9;
+import lesson9.HomeWork9;
 
 import java.util.Arrays;
 
-public class Hm12_1 {
+public class Hm12 {
     public static void main(String[] args) {
         //task 1
         int[] array=HomeWork9.createRandomArray(25,25);
