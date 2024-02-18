@@ -20,7 +20,6 @@ public class Car {
         this.distance = distance;
     }
 
-
     public void refuel() {
         this.gasoline++;
     }

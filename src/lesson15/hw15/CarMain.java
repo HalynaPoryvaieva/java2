@@ -11,6 +11,5 @@ public class CarMain {
     public static void main(String[] args) {
         Car car = new Car("Volvo", "gray", 4, 3);
         car.drive(3);
-        System.out.println(car.drive(3));
     }
 }
