@@ -1,7 +1,7 @@
 package lesson15;
 
 /**
- * AIT-TR, cohort 42.1, Java Basic, Lesson 15,Hw 15,Task 1
+ * AIT-TR, cohort 42.1, Java Basic, Lesson 15,Hw 15,Task 2
  *
  * @version 18-Feb-24
  *@author Halyna Poryvaieva
