@@ -62,7 +62,6 @@ public class Cat {
             System.out.println("I run");
             energy -= 5;
             System.out.println("Energy:");
-
         } else {
             System.out.println("Lack of energy!");
             System.out.println("I am going to eat");
