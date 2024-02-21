@@ -37,6 +37,8 @@ public class CatHw16 {
         realVolume += food;
         plate.decreaseFood(food);
         return food;
+        //Task2
+
     }
 }
 

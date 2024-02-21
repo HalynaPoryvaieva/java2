@@ -1,5 +1,10 @@
 package lesson16.homeW16;
 
+/**
+ * AIT-TR, cohort 42.1, Java Basic,Hw16,Task1,Task2
+ * @version 21-Feb-24
+ * @author Halyna Poryvaieva
+ */
 public class PlateHw16 { int capacity;
     int food;
 
