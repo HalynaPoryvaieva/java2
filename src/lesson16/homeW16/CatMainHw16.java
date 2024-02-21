@@ -10,15 +10,16 @@ import lesson16.Plate;
 public class CatMainHw16 {
     public static void main(String[] args) {
         CatHw16[] cats = {
-                new CatHw16("Max"),
-                new CatHw16("Fox"),
-                new CatHw16("Tom")
+                new CatHw16("Max",10),
+                new CatHw16("Fox",10),
+                new CatHw16("Tom",10)
         };
-        Plate plate = new Plate(20);
+        Plate plate = new Plate(5);
 
         for (int i = 0; i < cats.length; i++) {
             CatHw16 cat = cats[i];
             cat.eat(plate);
+            System.out.println(cat.eat(plate));
         }
     }
 }

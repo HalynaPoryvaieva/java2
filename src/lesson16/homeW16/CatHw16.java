@@ -16,13 +16,9 @@ public class CatHw16 {
     int cat[];
     int appetit;
 
-    public CatHw16(String name) {
+    public CatHw16(String name, int appetit) {
         this.name = name;
-    }
-
-    public CatHw16(String name, int maxVolume, int realVolume, int[] cat, int appetit) {
-        this.name = name;
-        generateAppetite(10);
+        this.appetit = generateAppetite(10);
     }
 
     public int generateAppetite(int appetite) {
@@ -32,14 +28,15 @@ public class CatHw16 {
         return appetite;
     }
 
-    public void eat(Plate plate) {
+    public int eat(Plate plate) {
         int food = plate.amautFood();
-        if (food > maxVolume - realVolume) {
-            food = maxVolume - realVolume;
+        if (food > food - realVolume) {
+            food = food - realVolume;
         }
         //TODO if cat eats all of food
         realVolume += food;
-        plate.decreaseFood(appetit);
+        plate.decreaseFood(food);
+        return food;
     }
 }
 
