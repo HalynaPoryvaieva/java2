@@ -16,7 +16,7 @@ public class Plate {
 
     public void add(int food) {
         //TODO check capacity
-        this.food+=food;
+        this.food += food;
     }
 
     public int amautFood() {
@@ -24,7 +24,7 @@ public class Plate {
     }
 
     public void decreaseFood(int food) {
-        this.food-= this.food;
+        this.food -= this.food;
     }
 }
 

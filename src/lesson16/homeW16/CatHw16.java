@@ -10,10 +10,10 @@ import java.util.Random;
  * @author Halyna Poryvaieva
  */
 public class CatHw16 {
-    String name ;
+    String name;
     int maxVolume;
     int realVolume;
-    int cat [];
+    int cat[];
     int appetit;
 
     public CatHw16(String name) {
@@ -30,14 +30,15 @@ public class CatHw16 {
         appetite = random.nextInt(10);
         System.out.println(appetite);
         return appetite;
-        }
-    public void eat(Plate plate){
-        int food=plate.amautFood();
-        if (food>maxVolume-realVolume){
-            food=maxVolume-realVolume;
+    }
+
+    public void eat(Plate plate) {
+        int food = plate.amautFood();
+        if (food > maxVolume - realVolume) {
+            food = maxVolume - realVolume;
         }
         //TODO if cat eats all of food
-        realVolume+=food;
+        realVolume += food;
         plate.decreaseFood(appetit);
     }
 }
