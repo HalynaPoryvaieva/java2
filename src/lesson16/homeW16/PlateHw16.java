@@ -5,7 +5,8 @@ package lesson16.homeW16;
  * @version 21-Feb-24
  * @author Halyna Poryvaieva
  */
-public class PlateHw16 { int capacity;
+public class PlateHw16 {
+    int capacity;
     int food;
 
     public void Plate(int capacity) {

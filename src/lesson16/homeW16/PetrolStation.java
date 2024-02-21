@@ -6,7 +6,7 @@ public class PetrolStation {
     public PetrolStation(double fuel) {
         this.fuel = fuel;
     }
-    public void decreaseFuel(double fuel){
+    public double decreaseFuel(double fuel){
         if (this.fuel-fuel<0){
             return 0;
         }

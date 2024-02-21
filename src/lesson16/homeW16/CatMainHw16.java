@@ -10,9 +10,9 @@ import lesson16.Plate;
 public class CatMainHw16 {
     public static void main(String[] args) {
         CatHw16[] cats = {
-                new CatHw16("Max",10),
-                new CatHw16("Fox",10),
-                new CatHw16("Tom",10)
+                new CatHw16("Max",1,2,1),
+                new CatHw16("Fox",6,3,4),
+                new CatHw16("Tom",5,2,7)
         };
         Plate plate = new Plate(3);
 
@@ -20,6 +20,7 @@ public class CatMainHw16 {
             CatHw16 cat = cats[i];
             cat.eat(plate);
             System.out.println(cat.eat(plate));
+            System.out.println("Cat:"+(double)(cat.realVolume/cat.maxVolue)*100+"%");
         }
         //Task2
         PetrolStation station=new PetrolStation(1000);

@@ -11,21 +11,15 @@ import java.util.Random;
  */
 public class CatHw16 {
     String name;
-    int maxVolume;
     int realVolume;
-    int cat[];
+    int maxVolue;
     int appetit;
 
-    public CatHw16(String name, int appetit) {
+    public CatHw16(String name, int realVolume, int maxVolue, int appetit) {
         this.name = name;
-        this.appetit = generateAppetite(10);
-    }
-
-    public int generateAppetite(int appetite) {
-        Random random = new Random();
-        appetite = random.nextInt(10);
-        System.out.println(appetite);
-        return appetite;
+        this.realVolume = realVolume;
+        this.maxVolue = maxVolue;
+        this.appetit = appetit;
     }
 
     public int eat(Plate plate) {
