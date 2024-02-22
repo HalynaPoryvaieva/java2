@@ -1,0 +1,7 @@
+C:\Users\ponka\.jdks\corretto-11.0.22\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\lib\idea_rt.jar=49174:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\bin" -Dfile.encoding=UTF-8 -classpath C:\AIT\BasicJava\JavaBasicProject\java2\out\production\java2 lesson17.hw17.EmployeeArrayObject
+
+Dr.Set,doctor,doctor@gmail.com,313254421,5000.0,45
+Tedi Max,mechanic,mechanic@gmail.com,800765444,3.8,44
+Kara Mag,surgeon,magsurgeon@gmail.com,122545112,7.1,50
+
+Process finished with exit code 0
