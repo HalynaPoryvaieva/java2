@@ -23,7 +23,7 @@ public class Interpreter {
             tokens = line.split(" ");
             switch (tokens[0]) {
                 case "print":
-                    if ( tokens.length < 2 )
+                    if (tokens.length < 2)
                         System.out.println("Error: variable name is missing");
                     else
                         printValue(tokens[1]);
@@ -39,14 +39,14 @@ public class Interpreter {
 
     static void assignValue(String line) {
 
-        if ( line.indexOf("=") == -1 ) {
+        if (line.indexOf("=") == -1) {
             System.out.println("Error: missing assignment symbol '='");
             return;
         }
 
         String[] tokens = line.split("=");
 
-        if ( tokens.length < 2 ) {
+        if (tokens.length < 2) {
             System.out.println("Error: variable name is missing");
             return;
         }
@@ -54,21 +54,19 @@ public class Interpreter {
         String varName = tokens[0].trim();
         String varValue = tokens[1].trim();
 
-        if ( varName.length() > 1 ) {
+        if (varName.length() > 1) {
             System.out.println("Error: variable name is too long");
             return;
-        }
-        else if ( varName.length() < 1 ) {
+        } else if (varName.length() < 1) {
             System.out.println("Error: variable name is missing");
             return;
-        }
-        else if ( varValue.length() < 1 ) {
+        } else if (varValue.length() < 1) {
             System.out.println("Error: variable name is missing");
             return;
         }
 
-        for (int i=0; i<varValue.length(); i++) {
-            if ( varValue.charAt(i) < '0' || varValue.charAt(i) > '9' ) {
+        for (int i = 0; i < varValue.length(); i++) {
+            if (varValue.charAt(i) < '0' || varValue.charAt(i) > '9') {
                 System.out.println("Error: wrong variable value (not integer)");
                 return;
             }
@@ -84,11 +82,10 @@ public class Interpreter {
 
     static void printValue(String varName) {
 
-        if ( varName.length() > 1 ) {
+        if (varName.length() > 1) {
             System.out.println("Error: variable name is too long");
             return;
-        }
-        else if ( varName.length() < 1 ) {
+        } else if (varName.length() < 1) {
             System.out.println("Error: variable name is missing");
             return;
         }
