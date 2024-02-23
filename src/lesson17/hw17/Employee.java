@@ -77,4 +77,13 @@ public class Employee {
             this.age = age;
         }
     }
+
+    public void printInfo() {
+         System.out.println(getInitials() + "," +
+                getPosition() + "," +
+                getEmail() + "," +
+                getPhone() + "," +
+                getSalary() + "," +
+                getAge());
+    }
 }

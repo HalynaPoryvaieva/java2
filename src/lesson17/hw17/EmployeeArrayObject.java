@@ -15,9 +15,8 @@ public class EmployeeArrayObject {
                 new Employee("Kara Mag", "surgeon", "magsurgeon@gmail.com", 122_545_112, 7.100, 50)
         };
         for (Employee employee : employees) {
-            if (employee.getAge() > 40) {
-                System.out.println(employee.getInitials() + "," + employee.getPosition() + "," + employee.getEmail() + "," + employee.getPhone() + "," +
-                        employee.getSalary() + "," + employee.getAge());
+            if ( employee.getAge() > 40 ) {
+                employee.printInfo();
             }
         }
     }

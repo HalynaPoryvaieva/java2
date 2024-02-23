@@ -16,13 +16,17 @@ public class Interpreter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String line;
+        String[] tokens = null;
         do {
             System.out.print("# ");
             line = scanner.nextLine();
-            String[] tokens = line.split(" ");
+            tokens = line.split(" ");
             switch (tokens[0]) {
                 case "print":
-                    printValue(tokens[1]);
+                    if ( tokens.length < 2 )
+                        System.out.println("Error: variable name is missing");
+                    else
+                        printValue(tokens[1]);
                     break;
                 case "exit":
                     System.out.println("Exit from interpreter.");
@@ -30,13 +34,46 @@ public class Interpreter {
                 default:
                     assignValue(line);
             }
-        } while (!line.equals("exit"));
+        } while (!tokens[0].equals("exit"));
     }
 
     static void assignValue(String line) {
+
+        if ( line.indexOf("=") == -1 ) {
+            System.out.println("Error: missing assignment symbol '='");
+            return;
+        }
+
         String[] tokens = line.split("=");
+
+        if ( tokens.length < 2 ) {
+            System.out.println("Error: variable name is missing");
+            return;
+        }
+
         String varName = tokens[0].trim();
         String varValue = tokens[1].trim();
+
+        if ( varName.length() > 1 ) {
+            System.out.println("Error: variable name is too long");
+            return;
+        }
+        else if ( varName.length() < 1 ) {
+            System.out.println("Error: variable name is missing");
+            return;
+        }
+        else if ( varValue.length() < 1 ) {
+            System.out.println("Error: variable name is missing");
+            return;
+        }
+
+        for (int i=0; i<varValue.length(); i++) {
+            if ( varValue.charAt(i) < '0' || varValue.charAt(i) > '9' ) {
+                System.out.println("Error: wrong variable value (not integer)");
+                return;
+            }
+        }
+
         // transform 'a' -> 0
         int idx = varName.charAt(0) - 'a';
         // transform "123" -> 123
@@ -46,6 +83,16 @@ public class Interpreter {
     }
 
     static void printValue(String varName) {
+
+        if ( varName.length() > 1 ) {
+            System.out.println("Error: variable name is too long");
+            return;
+        }
+        else if ( varName.length() < 1 ) {
+            System.out.println("Error: variable name is missing");
+            return;
+        }
+
         int idx = varName.charAt(0) - 'a';
         System.out.println(values[idx]);
     }
