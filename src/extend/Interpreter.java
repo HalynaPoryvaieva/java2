@@ -60,9 +60,6 @@ public class Interpreter {
         } else if (varName.length() < 1) {
             System.out.println("Error: variable name is missing");
             return;
-        } else if (varValue.length() < 1) {
-            System.out.println("Error: variable name is missing");
-            return;
         }
 
         for (int i = 0; i < varValue.length(); i++) {
