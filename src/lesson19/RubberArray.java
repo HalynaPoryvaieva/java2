@@ -22,25 +22,25 @@ public class RubberArray {
     public int get(int idx) {
         return data[idx];
     }
+    private void extendArrayIfNeed(){
+        if(length==data.length){
+            int[] newData=new int[(int) (data.length*RESIZE_KOEF)];
+            for (int i=0;i<data.length;i++){
+                newData[i]=data[i];
+            }
+            data=newData;
+        }
+    }
 
     public void add(int value) {
-        if (length == data.length) {
+       extendArrayIfNeed();
             data[length] = value;
             length++;
-        } else {
-            int[] newData = new int[(int) (data.length * RESIZE_KOEF)];
-            for (int i = 0; i < data.length; i++) {
-                newData[i] = data[i];
-            }
-            data = newData;
-        }
-
-        data[length] = value;
-        length++;
     }
 
     //Task 4
     public void add(int value, int idx) {
+        extendArrayIfNeed();
         for (int i = length; i > idx; i--) {
             data[i] = data[i - 1];
         }
