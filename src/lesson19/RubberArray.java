@@ -1,7 +1,5 @@
 package lesson19;
 
-import java.util.AbstractList;
-
 /**
  * AIT-TR, cohort 42.1, Java Basic,Hw19,Task1,2,3,4
  * @version 28-Feb-24
