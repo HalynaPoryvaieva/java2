@@ -12,5 +12,11 @@ public class Lesson19 {
         System.out.println(ra.get(2));
         ra.remove(2);
         System.out.println(ra);
+
+        //Hw19,Task 2,3,4,1
+        System.out.println(ra.contains(12));
+        System.out.println(ra.indexOf(8));
+        ra.add(1,0);
+        System.out.println(ra.toString());
     }
 }
