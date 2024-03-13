@@ -20,9 +20,11 @@ public class People {
     public void rest() {
         switch (this.getClass().getSimpleName()) {
             case "OrdinaryMan":
-                System.out.println(this.name + "speed 5 km/h");
+                System.out.println(this.name + "speed 15 km/h");
+                break;
             case "AmateurAthlete":
                 System.out.println(this.name + "speed 10 km/h");
+                break;
             case "ProfessionalAthlete":
                 System.out.println(this.name + "speed 5 km/h");
                 break;
