@@ -1,6 +1,4 @@
-package lesson27Figure;
-
-import lesson27Figure.Figure;
+package lesson27.lesson27Figure;
 
 public class Circle implements Figure {
 

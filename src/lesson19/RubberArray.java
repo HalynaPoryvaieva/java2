@@ -1,4 +1,4 @@
-package lesson18.lesson19;
+package lesson19;
 
 /**
  * AIT-TR, cohort 42.1, Java Basic,Hw19,Task1,2,3,4
@@ -22,6 +22,7 @@ public class RubberArray {
     public int get(int idx) {
         return data[idx];
     }
+
     private void extendArrayIfNeed(){
         if(length==data.length){
             int[] newData=new int[(int) (data.length*RESIZE_KOEF)];

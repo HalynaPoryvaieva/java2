@@ -1,4 +1,4 @@
-package lesson27Figure;
+package lesson27.lesson27Figure;
 
 public class Rectangle implements Figure {
 

@@ -1,8 +1,4 @@
-package lesson27Duck;
-
-import lesson27Duck.Flyable;
-import lesson27Duck.Runable;
-import lesson27Duck.Swimable;
+package lesson27.lesson27Duck;
 
 public class Duck implements Runable, Flyable, Swimable {
 
