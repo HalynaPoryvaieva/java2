@@ -2,6 +2,11 @@ package lesson29;
 
 import org.w3c.dom.Node;
 
+/**
+ * AIT-TR, cohort 42.1, Java Basic,Hw29
+ * @version 22-Mar-24
+ * @author Halyna Poryvaieva
+ */
 public class RubberList {
 
     private int size = 0;
