@@ -9,11 +9,11 @@ public class ToWarehouse extends BaseDocument{
         super(id);
     }
 
-    public void add(Product product,int count){
-        products.add(new ProductAndCount(product,count));
-    }
-
-    public void toWarehouse(Warehouse wareHouse){
-        wareHouse.addAll(products);
+    public void toWarehouse(Warehouse warehouse,Manager manager) {
+        if (this.manager!=null){
+            return;
+        }
+        warehouse.addAll(products);
+        this.manager=manager;
     }
 }

@@ -26,7 +26,7 @@ public class Employee {
         return initials;
     }
 
-    public void setInitials(String initials) {
+    public void setInitials() {
         if (initials != null) {
             this.initials = initials;
         }
@@ -78,6 +78,7 @@ public class Employee {
         }
     }
 
+
     public void printInfo() {
          System.out.println(getInitials() + "," +
                 getPosition() + "," +
@@ -86,4 +87,5 @@ public class Employee {
                 getSalary() + "," +
                 getAge());
     }
+
 }

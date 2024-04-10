@@ -1,4 +1,4 @@
-package lesson29;
+package lesson29.hw;
 
 import org.w3c.dom.Node;
 
@@ -14,6 +14,8 @@ public class RubberList {
     private Node first;
 
     private Node last;
+
+    private int findIndex;
 
     public Node getFirst() {
         return first;
@@ -32,23 +34,24 @@ public class RubberList {
         return count;
     }
 
-    public int get(int idx) {
-
-        if (idx == 0) {
-            return first.item;
-        } else {
-            int index = 0;
-            Node cursor = first;
-            while (cursor.next != null) {
-                cursor = cursor.next;
-                index++;
-                if (idx == index) {
-                    return cursor.item;
-                }
-            }
+    public Integer get(int idx) {
+        Node findNode = findByIndex(idx);
+        if (findNode != null) {
+            return findNode.item;
         }
+        return null;
+    }
 
+    public boolean contains(int value) {
+        return indexOf(value) != -1;
 
+    }
+
+    public int indexOf(int value) {
+        Node node = findByValue(value);
+        if (node != null) {
+            return findIndex;
+        }
         return -1;
     }
 
@@ -86,6 +89,7 @@ public class RubberList {
     }
 
     public void remove(int idx) {
+
         if (idx == 0) {
             if (size == 1) {
                 first = null;
@@ -95,24 +99,24 @@ public class RubberList {
                 first = newFirst;
             }
             size--;
+        } else if (idx == size - 1) {
+            Node newLast = last.prev;
+            newLast.next = null;
+            last.prev = null;
+            last = newLast;
+            size--;
         } else {
-            int index = 0;
-            Node cursor = first;
-            while (cursor.next != null) {
-                cursor = cursor.next;
-                index++;
-                if (idx == index) {
-                    Node left = cursor.prev;
-                    Node right = cursor.next;
-                    left.next = right;
-                    if (right != null) {
-                        right.prev = left;
-                    }
-                    cursor.prev = null;
-                    cursor.next = null;
-                    size--;
-                }
+            Node findNode = findByIndex(idx);
+            if (findNode == null) {
+                return;
             }
+            Node nodeA = findNode.prev;
+            Node nodeC = findNode.next;
+            nodeA.next = nodeC;
+            nodeC.prev = nodeA;
+            findNode.prev = null;
+            findNode.next = null;
+            size--;
         }
     }
 
@@ -133,6 +137,44 @@ public class RubberList {
         return sb.append("]").toString();
     }
 
+    private Node findByIndex(int idx) {
+        if (idx == 0) {
+            return first;
+        }
+        if (idx == size - 1) {
+            return last;
+        }
+        findIndex = 0;
+        Node cursor = first;
+        while (cursor.next != null) {
+            cursor = cursor.next;
+            findIndex++;
+            if (idx == findIndex) {
+                return cursor;
+            }
+        }
+        return null;
+    }
+
+    private Node findByValue(int value) {
+        if (size == 0) {
+            return null;
+        }
+        findIndex = 0;
+        if (first.item == value) {
+            return first;
+        }
+        Node cursor = first;
+        while (cursor.next != null) {
+            cursor = cursor.next;
+            findIndex++;
+            if (cursor.item == findIndex) {
+                return cursor;
+            }
+        }
+        return null;
+    }
+
     private static class Node {
 
         int item;
@@ -143,15 +185,6 @@ public class RubberList {
             this.item = element;
             this.next = next;
             this.prev = prev;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "item=" + item +
-                    ", next=" + (next ==null?null:"link")+
-                    ", prev=" + (prev==null?null:"link") +
-                    '}';
         }
     }
 }

@@ -3,11 +3,13 @@ package lesson23.homeW23;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseDocument  {
+public abstract class BaseDocument  {
 
     protected int id;
 
     protected List<ProductAndCount> products;
+
+    protected Manager manager;
 
     public BaseDocument(int id) {
         this.id = id;

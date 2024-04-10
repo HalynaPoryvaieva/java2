@@ -6,11 +6,11 @@ public class FromWarehouse extends BaseDocument{
         super(id);
     }
 
-    public void add(Order order){
-        products=order.getProducts();
+    public void add(Order order) {
+        products = order.getProducts();
     }
 
-    public  void fromWarehouse(Warehouse wareHouse){
-        wareHouse.deleteAll(products);
-   }
+    public void fromWarehouse(Warehouse warehouse) {
+        warehouse.deleteAll(products);
+    }
 }
