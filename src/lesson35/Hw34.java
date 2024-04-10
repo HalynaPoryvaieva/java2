@@ -24,5 +24,7 @@ public class Hw34 {
         Collections.sort(employees, ageComparator);
         System.out.println("by age:");
         employees.forEach(System.out::println);
+
+
     }
 }

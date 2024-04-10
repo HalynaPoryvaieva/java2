@@ -25,9 +25,11 @@ public class Lesson35 {
         Person p2=new Person("Mike",35);
         System.out.println(p1.equals(p2));
 
-        Map<Integer,Person> strMap =new HashMap<>();
-        strMap.put(125,new Person("Luke",28));
-
-        System.out.println(strMap.get(125));
+        HashTable<Integer,Person> strMap =new HashTable<>();
+        strMap.put(12,new Person("Luke",28));
+        strMap.put(5,new Person("Mark",24));
+        System.out.println(strMap);
+        System.out.println(strMap.get(12));
+        System.out.println(strMap.get(15));
     }
 }
