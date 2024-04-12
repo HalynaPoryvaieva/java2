@@ -1,4 +1,4 @@
-package lesson36;
+package lesson36.hw36;
 
 import java.util.*;
 
