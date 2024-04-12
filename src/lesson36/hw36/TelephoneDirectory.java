@@ -24,4 +24,9 @@ public class TelephoneDirectory {
     public List<Integer> get(String name) {
         return telephoneDirectory.get(name);
     }
+
+    @Override
+    public String toString() {
+        return telephoneDirectory.toString();
+    }
 }
